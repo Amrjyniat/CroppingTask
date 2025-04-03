@@ -1,7 +1,6 @@
 package com.example.croppingtask.util
 
 import android.graphics.Bitmap
-import android.util.Log
 import androidx.compose.foundation.gestures.calculatePan
 import androidx.compose.foundation.gestures.calculateZoom
 import androidx.compose.ui.geometry.Offset
@@ -9,8 +8,8 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.input.pointer.PointerEvent
-import com.example.croppingtask.CropCorners
 import com.example.croppingtask.model.Corner
+import com.example.croppingtask.model.CropCorners
 import kotlin.math.min
 import kotlin.math.roundToInt
 
@@ -157,7 +156,6 @@ fun getCroppedBitmap(
         ((cropRect.left) / scaleFactor).roundToInt().coerceIn(0, bitmapWidth.toInt())
     val cropTop =
         ((cropRect.top) / scaleFactor).roundToInt().coerceIn(0, bitmapHeight.toInt())
-    Log.i("ImageCropper", "cropLeft: $cropLeft , cropTop: $cropTop")
     val cropRight =
         ((cropRect.right) / scaleFactor).roundToInt().coerceIn(0, bitmapWidth.toInt())
     val cropBottom =

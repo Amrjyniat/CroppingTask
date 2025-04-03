@@ -233,7 +233,6 @@ fun ImageCroppingScreen(mainViewModel: MainViewModel, paddingValues: PaddingValu
                                             isDragging = false
                                             draggingCorner = null
                                             draggingCenter = false
-                                            mainViewModel.setCropCorners(cropCorners)
                                         }
                                         isTransforming = false
                                     }

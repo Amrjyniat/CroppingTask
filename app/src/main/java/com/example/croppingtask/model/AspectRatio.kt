@@ -2,7 +2,6 @@ package com.example.croppingtask.model
 
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.geometry.Offset
-import com.example.croppingtask.CropCorners
 
 enum class AspectRatio(val label: String, val cropCorners: (Size) -> CropCorners) {
     Custom("Custom", { size ->

@@ -108,17 +108,12 @@ fun DrawScope.drawCorner(center: Offset, corner: Corner) {
     }
 
     path.apply {
-        // Move to the starting point (center)
         moveTo(center.x, center.y)
-        // Draw vertical line
         lineTo(verticalLine.x, verticalLine.y)
-        // Move back to center
         moveTo(center.x, center.y)
-        // Draw horizontal line
         lineTo(horizontalLine.x, horizontalLine.y)
     }
 
-    // Draw the path
     drawPath(
         path = path,
         color = Color(0xFF999DE3),
